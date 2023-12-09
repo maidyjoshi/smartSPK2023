@@ -114,7 +114,7 @@
                                                         ?>
                                                     </td>
                                                     <td>
-                                                        <a href="hapus_kriteria.php?id_kriteria=<?=$barisbobot['id_kriteria']?>">hapus</a> |
+                                                        <a href="hapus_kriteria.php?id_kriteria=<?=$barisbobot['id_kriteria']?>">hapus</a>
                                                         <!-- Replace "id" with the actual primary key column name -->
                                                     </td>
                                                 </tr>

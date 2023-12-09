@@ -8,7 +8,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h1 class="page-header">Selamay Datang</h1>
+                            <h1 class="page-header">Selamat Datang</h1>
                         </div>
                         <div class="col-lg-6">
                             <div class="panel panel-default">
