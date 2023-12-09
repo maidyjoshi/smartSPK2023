@@ -18,6 +18,9 @@
                             <form role="form" action="" method="POST">
                                 <div class="form-group">
                                     <input type="text" required name="nama" class="form-control" placeholder="NAMA">
+                                <div class="form-group">
+                                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                            </div>
                             </form>
                             <?php
                                 include 'onek.php';
@@ -66,9 +69,8 @@
                                                 ?>
                                                 <tr>
                                                     <td><?=$n?></td>
-                                                    <td><?=$siswa['nama']?></td>
-                                                    <td><a onclick="return confirm('Apakah yakin menghapus ?')" href='aksi/hapusa.php?name=<?=$siswa['nisn'];?>'>hapus</a> | <a href="">edit</a></td>
-                                                </tr>
+                                                    <td><?=$alternatif['nama']?></td>
+                                                    <td><a onclick="return confirm('Apakah yakin menghapus ?')" href="hapus_alt.php?id_alt=<?=$alternatif['id_alt'];?>">hapus</a></td>
                                                 <?php
                                                     $n++;
                                                     }
