@@ -57,7 +57,7 @@
 }
 
 .navbar-top-links>li>a {
-    color: #BEF661;
+    color: #a7a7a7;
 }
 
 .navbar-top-links>li>a:hover, .navbar-top-links>li>a:focus, .navbar-top-links>.open>a, .navbar-top-links>.open>a:hover, .navbar-top-links>.open>a:focus {
@@ -116,7 +116,7 @@
 }
 
 .sidebar ul li {
-    border-bottom: 1px solid #BEF661;
+    border-bottom: 1px solid #eee;
 }
 
 .sidebar ul li a.active {
