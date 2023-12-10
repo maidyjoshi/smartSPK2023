@@ -2,31 +2,45 @@
 include 'onek.php';
 require_once 'nav.php';
 
-// Fungsi untuk menyimpan nilai ke database
 function simpanNilai($alternatifID, $kriteria) {
     global $dbcon;
+    $sql = "INSERT INTO tabel_nilai (alternatif_id, kriteria_id, nilai) VALUES (?, ?, ?)";
+    $stmt = mysqli_prepare($dbcon, $sql);
 
-    $sql = "INSERT INTO tabel_nilai (alternatif_id, kriteria_id, nilai) VALUES ";
     foreach ($kriteria as $kriteriaID => $nilai) {
-        $sql .= "('$alternatifID', '$kriteriaID', '$nilai'), ";
+        mysqli_stmt_bind_param($stmt, "iii", $alternatifID, $kriteriaID, $nilai);
+        mysqli_stmt_execute($stmt);
     }
 
-    $sql = rtrim($sql, ', '); // Menghapus koma terakhir
-    $query = mysqli_query($dbcon, $sql);
-
-    if ($query) {
+    if (mysqli_stmt_affected_rows($stmt) > 0) {
         echo "<script>alert('Data berhasil disimpan')</script>";
     } else {
         echo "<script>alert('Gagal menyimpan data')</script>";
     }
+    mysqli_stmt_close($stmt);
 }
 
 if (isset($_POST['submit'])) {
     $alternatifID = $_POST['alternatif'];
     $kriteria = $_POST['kriteria'];
 
-    // Panggil fungsi untuk menyimpan nilai ke dalam database
-    simpanNilai($alternatifID, $kriteria);
+    if (!empty($alternatifID) && is_numeric($alternatifID)) {
+        $validKriteria = true;
+        foreach ($kriteria as $nilai) {
+            if (!is_numeric($nilai)) {
+                $validKriteria = false;
+                break;
+            }
+        }
+
+        if ($validKriteria) {
+            simpanNilai($alternatifID, $kriteria);
+        } else {
+            echo "<script>alert('Input nilai kriteria harus berupa angka')</script>";
+        }
+    } else {
+        echo "<script>alert('Pilih alternatif terlebih dahulu')</script>";
+    }
 }
 ?>
 
@@ -46,13 +60,11 @@ if (isset($_POST['submit'])) {
                         $queryAlternatif = mysqli_query($dbcon, $sqlAlternatif);
 
                         while ($alternatif = mysqli_fetch_array($queryAlternatif)) {
-                            echo '<option value="' . $alternatif['id_alternatif'] . '">' . $alternatif['nama'] . '</option>';
+                            echo '<option value="' . $alternatif['id_alt'] . '">' . $alternatif['nama'] . '</option>';
                         }
                         ?>
                     </select>
                 </div>
-
-                <!-- Menampilkan form input untuk setiap kriteria -->
                 <?php
                 $sqlKriteria = "SELECT * FROM kriteria";
                 $queryKriteria = mysqli_query($dbcon, $sqlKriteria);
@@ -64,7 +76,6 @@ if (isset($_POST['submit'])) {
                     echo '</div>';
                 }
                 ?>
-
                 <div class="form-group">
                     <input type="submit" name="submit" class="btn btn-primary form-control" value="Submit">
                 </div>

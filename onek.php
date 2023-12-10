@@ -9,6 +9,6 @@
 	if (!$dbcon) {
 		die("Gagal ke DataBase : ".mysqli_connect_error());
 	}else{
-		//echo"INI TERHU BUNG";
+		
 	}
 ?>
