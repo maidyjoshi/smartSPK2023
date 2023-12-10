@@ -84,7 +84,7 @@
                                 <a href="index.php" class=""><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                             </li>
                             <li>
-                                <a href="alternatif.php" class="active"><i class="fa fa-file-o fa-fw"></i> Data Alternatif</a>
+                                <a href="alternatif.php" class=""><i class="fa fa-file-o fa-fw"></i> Data Alternatif</a>
                             </li>
                             <li>
                                 <a href="kriteria.php" class=""><i class="fa fa-file-o fa-fw"></i> Data Kriteria</a>
