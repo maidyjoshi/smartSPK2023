@@ -2,7 +2,7 @@
     include 'onek.php';
     require_once 'nav.php';
 ?>
-            
+
 <div id="page-wrapper">
     <div class="container-fluid">
         <div class="row">
@@ -24,8 +24,7 @@
         </div>
     </div>
 </div>
-</div>
 
 <?php 
     require_once 'foot.php';
- ?>
+?>

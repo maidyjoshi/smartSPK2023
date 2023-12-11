@@ -1,50 +1,42 @@
 <?php
    include 'cek.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sistem Pengambilan Keputusan SMART</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="css/metisMenu.min.css" rel="stylesheet">
+    <!-- Timeline CSS -->
+    <link href="css/timeline.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/startmin.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="css/morris.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
 
-        <title>Sistem Pengambilan Keputusan SMART</title>
-
-        <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- MetisMenu CSS -->
-        <link href="css/metisMenu.min.css" rel="stylesheet">
-
-        <!-- Timeline CSS -->
-        <link href="css/timeline.css" rel="stylesheet">
-
-        <!-- Custom CSS -->
-        <link href="css/startmin.css" rel="stylesheet">
-
-        <!-- Morris Charts CSS -->
-        <link href="css/morris.css" rel="stylesheet">
-
-        <!-- Custom Fonts -->
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-
-        <div id="wrapper">
-
-            <!-- Navigation -->
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="">Politeknik Negeri Malang</a>
+                    <a class="navbar-brand" href="">SMART (Simple Multi Attribute Rating Technique)</a>
                 </div>
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -89,16 +81,14 @@
                             </li>
                             <li>
                                 <a href="spk.php" class=""><i class="fa fa-cogs fa-fw"></i> Proses SPK</a>
-                            </li>
-                            
-                            <!-- <li>
-                                <a href="pages/tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
-                            </li>   -->                                                     
-                        </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            
+                            </li>                                         
                         </ul>
                     </div>
                 </div>
             </nav>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
