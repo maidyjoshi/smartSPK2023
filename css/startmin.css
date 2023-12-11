@@ -4,7 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
+ body {
     background-color: #f8f8f8;
 }
 
@@ -57,7 +57,7 @@ body {
 }
 
 .navbar-top-links>li>a {
-    color: #999;
+    color: #a7a7a7;
 }
 
 .navbar-top-links>li>a:hover, .navbar-top-links>li>a:focus, .navbar-top-links>.open>a, .navbar-top-links>.open>a:hover, .navbar-top-links>.open>a:focus {
@@ -116,7 +116,7 @@ body {
 }
 
 .sidebar ul li {
-    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 1px solid #eee;
 }
 
 .sidebar ul li a.active {
@@ -170,7 +170,7 @@ body {
 }
 
 .btn-primary.btn-outline {
-    color: #428bca;
+    color: #BEF661;
 }
 
 .btn-success.btn-outline {

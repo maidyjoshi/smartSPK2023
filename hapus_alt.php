@@ -1,26 +1,26 @@
 <?php
-// Include your database connection file
 include("onek.php");
 
-// Check if the "id_alt" parameter is set in the URL
-if(isset($_GET['id_alt'])) {
+if (isset($_GET['id_alt'])) {
     $id = $_GET['id_alt'];
 
-    // Perform the SQL DELETE operation
-    $sql = "DELETE FROM alternatif WHERE id_alt = $id"; // Replace "your_table_name" with your actual table name
-    $result = mysqli_query($dbcon, $sql);
+    $sqlDeleteRelatedData = "DELETE FROM tabel_nilai WHERE alternatif_id = $id";
+    $resultRelatedData = mysqli_query($dbcon, $sqlDeleteRelatedData);
 
-    // Check if the delete operation was successful
-    if($result) {
-        echo "Record deleted successfully";
-        header("Location: alternatif.php");
-        exit();
+    if ($resultRelatedData) {
+        $sql = "DELETE FROM alternatif WHERE id_alt = $id";
+        $result = mysqli_query($dbcon, $sql);
+
+        if ($result) {
+            echo "Record deleted successfully";
+            header("Location: alternatif.php");
+            exit();
+        } else {
+            echo "Error deleting record: " . mysqli_error($dbcon);
+        }
     } else {
-        echo "Error deleting record: " . mysqli_error($dbcon);
+        echo "Error deleting related data: " . mysqli_error($dbcon);
     }
-
-    // Close the database connection
-    mysqli_close($dbcon);
 } else {
     echo "Invalid request";
 }
